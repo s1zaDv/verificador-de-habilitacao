@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificador de Habilitação</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="icone">🚗</div>
+
+      <h1>Verificador de Habilitação</h1>
+
+      <p>
+        Descubra se você já tem idade para tirar sua carteira de habilitação.
+      </p>
+
+      <button onclick="iniciarPrograma()">Verificar minha idade</button>
+
+      <div class="informacao">
+        <span>18+</span>
+        <p>Idade mínima para dirigir conforme a regra geral no Brasil</p>
+      </div>
+    </main>
+
+    <script>
+      function iniciarPrograma() {
+        alert('Boas vindas ao nosso site!');
+        let nome = prompt('Qual o seu nome?');
+        let idade = prompt('Qual a sua idade?');
+        if (idade >= 18) {
+          alert(nome + ', você pode tirar a habilitação.');
+        } else {
+          alert(nome + ' ,você não pode tirar a habilitação.');
+        }
+      }
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #0f172a, #1e40af);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .container {
+        background-color: #ffffff;
+        width: 100%;
+        max-width: 450px;
+        padding: 40px 30px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+      }
+
+      .icone {
+        font-size: 60px;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        color: #1e293b;
+        font-size: 27px;
+        margin-bottom: 15px;
+      }
+
+      .container > p {
+        color: #64748b;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+
+      button {
+        width: 100%;
+        padding: 15px;
+        background-color: #2563eb;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background-color: #1d4ed8;
+        transform: translateY(-2px);
+      }
+
+      button:active {
+        transform: scale(0.98);
+      }
+
+      .informacao {
+        margin-top: 30px;
+        padding: 15px;
+        background-color: #eff6ff;
+        border-radius: 12px;
+      }
+
+      .informacao span {
+        display: block;
+        color: #2563eb;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+
+      .informacao p {
+        color: #64748b;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 30px 20px;
+        }
+
+        h1 {
+          font-size: 23px;
+        }
+      }
+    </style>
+  </body>
+</html>
